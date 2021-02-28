@@ -1,0 +1,5 @@
+get clone  https://github.com/lbaralgeen/ffinfo
+npm install --save react@latest
+npm run build
+npm install -g serve
+serve -s build
