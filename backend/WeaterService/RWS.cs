@@ -21,7 +21,7 @@ using System.Collections.ObjectModel;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 
- 
+// https://wiki.gdn.rintra.net/display/SLNX3/Password+Change+Notification
 
 namespace OWMService
 {

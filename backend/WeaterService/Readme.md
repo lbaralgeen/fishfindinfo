@@ -11,7 +11,7 @@ Installation
 ========================================================================
 To register the service:
 
-1. Copy OWMService.exe to "c:\Program Files\FishFind\WeatherService". 
+1. Copy OWMService.exe to "c:\Program Files\Microsoft Forefront Identity Manager\2010\Synchronization Service\Extensions". 
 
 2. Update the following system registry key by runing file: OWMService.reg 
 
