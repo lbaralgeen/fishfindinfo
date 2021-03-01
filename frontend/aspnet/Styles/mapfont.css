@@ -1,0 +1,302 @@
+/*!
+ *	MapFont 1.3
+ *	Updated 23.12.2015
+ *	Map icons for Bootstrap
+ *	Author - Dmitry Kosatchev
+ *	Email: kosatchev@gmail.com
+ *	Twitter: http://twitter.com/kosatchev
+ *	------------------------------------------------------------------------------
+ *	Maintained at http://github.com/kosatchev/mapfont
+ *
+ *	License
+ *	------------------------------------------------------------------------------
+ *	- Font licensed under SIL OFL 1.1 -
+ *		http://scripts.sil.org/OFL
+ *	- CSS, SCSS and LESS are licensed under MIT License -
+ *		http://opensource.org/licenses/mit-license.html
+ *	- Documentation licensed under CC BY 3.0 -
+ *		http://creativecommons.org/licenses/by/3.0/
+ *	- Inspired by and works great as a companion with Font Awesome
+ *		"Font Awesome by Dave Gandy - http://fontawesome.io"
+ */
+
+@font-face {
+	font-family: 'MapFont';
+	src: url('../fonts/mapfont.ttf');
+	src: url('../fonts/mapfont.ttf') format('truetype');
+	/*src: url('../fonts/mapfont.eot');
+	src: url('../fonts/mapfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/mapfont.woff2') format('woff2'),
+		url('../fonts/mapfont.woff') format('woff'),
+		url('../fonts/mapfont.ttf') format('truetype');*/
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+.mf {
+	display: inline-block;
+	font-family: 'MapFont';
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.mf-flip-horizontal {
+	filter: progid:DXImageTransform.mfcrosoft.BasicImage(rotation=0, mirror=1);
+	-webkit-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+.mf-flip-vertical {
+	filter: progid:DXImageTransform.mfcrosoft.BasicImage(rotation=2, mirror=1);
+	-webkit-transform: scale(1, -1);
+	-ms-transform: scale(1, -1);
+	transform: scale(1, -1);
+}
+
+
+.mf-rotate-90 {
+	filter: progid:DXImageTransform.mfcrosoft.BasicImage(rotation=1);
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.mf-rotate-180 {
+	filter: progid:DXImageTransform.mfcrosoft.BasicImage(rotation=2);
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.mf-rotate-270 {
+	filter: progid:DXImageTransform.mfcrosoft.BasicImage(rotation=3);
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+}
+
+.mf-fw {
+	text-align: center;
+	width: 1.4em;
+}
+
+.mf-gmap-api {
+margin-top: 2.2em;
+margin-left: 2.2em;
+font-size: 2.1em;
+text-align:center;
+}
+
+.mf-ymap-api {
+margin-top: -0.15em;
+font-size: 1.5em;
+text-align:center;
+}
+
+
+
+
+.mf-petrol-station:before {
+	content: "\f021";
+}
+.mf-gas-station:before {
+	content: "\f022";
+}
+.mf-car-charger:before {
+	content: "\f023";
+}
+
+
+.mf-car-rent:before {
+	content: "\f025";
+}
+.mf-vehicle-ferry:before {
+	content: "\f026";
+}
+.mf-car-wash:before {
+	content: "\f027";
+}
+.mf-slippery-road:before {
+	content: "\f028";
+}
+.mf-car-accident:before {
+	content: "\f029";
+}
+
+
+.mf-mapfont-logo:before {
+	content: "\f030";
+}
+.mf-map-marker:before {
+	content: "\f031";
+}
+.mf-map-marker-square:before {
+	content: "\f032";
+}
+.mf-paper-map:before {
+	content: "\f033";
+}
+.mf-online-map:before {
+	content: "\f034";
+}
+
+
+.mf-plane:before {
+	content: "\f041";
+}
+.mf-helicopter:before {
+	content: "\f042";
+}
+
+
+.mf-bike:before {
+	content: "\f045";
+}
+.mf-old-scooter:before {
+	content: "\f046";
+}
+.mf-scooter:before {
+	content: "\f047";
+}
+.mf-ricksha:before {
+	content: "\f048";
+}
+.mf-quad-bike:before {
+	content: "\f049";
+}
+.mf-sportcar:before {
+	content: "\f04a";
+}
+.mf-off-road:before {
+	content: "\f04b";
+}
+.mf-truck:before {
+	content: "\f04c";
+}
+.mf-bus:before {
+	content: "\f04d";
+}
+.mf-trolleybus:before {
+	content: "\f04e";
+}
+.mf-tram:before {
+	content: "\f04f";
+}
+.mf-subway:before {
+	content: "\f050";
+}
+.mf-monorail:before {
+	content: "\f051";
+}
+.mf-train:before {
+	content: "\f052";
+}
+.mf-funicular:before {
+	content: "\f053";
+}
+.mf-cableway:before {
+	content: "\f054";
+}
+.mf-snowmobile:before {
+	content: "\f055";
+}
+
+
+.mf-water-scooter:before {
+	content: "\f057";
+}
+
+
+.mf-shop:before {
+	content: "\f061";
+}
+.mf-market:before {
+	content: "\f062";
+}
+.mf-stock:before {
+	content: "\f063";
+}
+.mf-business-center:before {
+	content: "\f064";
+}
+.mf-post:before {
+	content: "\f065";
+}
+.mf-atm:before {
+	content: "\f066";
+}
+.mf-shower:before {
+	content: "\f067";
+}
+.mf-wc:before {
+	content: "\f068";
+}
+.mf-cafe:before {
+	content: "\f069";
+}
+.mf-bar:before {
+	content: "\f06a";
+}
+.mf-restaurant:before {
+	content: "\f06b";
+}
+.mf-carpenter:before {
+	content: "\f06c";
+}
+.mf-mechanic:before {
+	content: "\f06d";
+}
+
+
+
+.mf-gym:before {
+	content: "\f06f";
+}
+.mf-playground:before {
+	content: "\f070";
+}
+.mf-museum:before {
+	content: "\f071";
+}
+.mf-sculpture:before {
+	content: "\f072";
+}
+.mf-monument:before {
+	content: "\f073";
+}
+.mf-fountain:before {
+	content: "\f074";
+}
+.mf-square:before {
+	content: "\f075";
+}
+.mf-park:before {
+	content: "\f076";
+}
+.mf-pharmacy:before {
+	content: "\f077";
+}
+
+
+
+.mf-rabbit:before {
+	content: "\f078";
+}
+.mf-anchor:before {
+	content: "\f079";
+}
+.mf-battletank:before {
+	content: "\f080";
+}
+.mf-spike:before {
+	content: "\f081";
+}
+.mf-day-cloudy:before {
+	content: "\f082";
+}
+.mf-factory:before {
+	content: "\f083";
+}

@@ -1,0 +1,196 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FishTracker.SiteMaster" %>
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head runat="server">
+    <title>Fish Tracker</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msvalidate.01" content="E0AA84DEC22F41D9FF30B93B2DD6D130" />
+    <meta name="yandex-verification" content="fa64af197d4ba3bb" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+<link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+
+<asp:ContentPlaceHolder ID="HeadContent" runat="server"> </asp:ContentPlaceHolder>
+
+    <style>
+        .style1
+        {
+            /*width: 100%;*/
+            height: 64px;
+        }
+        .style5
+        {
+            width: 1142px;
+            color: #FFFFFF;
+            text-align: left;
+        }
+        .style6
+        {
+            width: 745px;
+        }
+        .style7
+        {
+            width: 745px;
+            color: #FFFFFF;
+            height: 38px;
+        }
+        .style9
+        {
+            width: 61%;
+            height: 38px;
+        }
+        .style10
+        {
+            width: 40px;
+        }
+        .auto-style1 {
+            width: 40px;
+            height: 5px;
+        }
+        .auto-style2 {
+            width: 620px;
+            height: 5px;
+        }
+        .auto-style4 {
+            height: 32px;
+        }
+        .auto-style5 {
+            height: 5px;
+        }
+        .hide
+        {
+            visibility: hidden;
+         }
+        .body-style {
+         margin: -25px 0px 0px 0px;
+      }
+
+        .auto-style7 {
+            margin: -25px 0px 0px 0px;
+            width: 952px;
+        }
+
+        .auto-style8 {
+            height: 34px;
+            width: 569px;
+        }
+        .auto-style10 {
+            width: 403px;
+        }
+
+        .auto-style12 {
+            width: 23px;
+            height: 21px;
+        }
+        </style>
+
+ <script>
+    function Send() {
+        var name = document.getElementById("txtBoxSearch").value;
+        var url = "/Resources/RscRiverList.aspx?search=" + encodeURIComponent(name);
+        window.location.href = url;
+    };
+</script>
+
+</head>
+<body class="body-style">
+    <form runat="server" style="margin: -15px; padding: 0px;">
+    <div class="page">
+        <div class="header">
+            <table id="headerTbl" style="height: 100px" >
+            <tr class="auto-style4">
+                <td class="auto-style1"> 
+                    <a href="/Default.aspx" title="Main Page">
+                    <img src="/Images/fslogo.png" alt="logo" height="48" /></a>
+                </td>
+
+                <td class="auto-style2">
+                    <div class="loginDisplay">
+                        <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                            <AnonymousTemplate>
+                                <a href="/Account/Login.aspx" id="HeadLoginStatus" runat="server">[Log In]</a>
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                                <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="[Log Out]" LogoutPageUrl="~/"/>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </div>
+                </td><td class="auto-style1"> </td>
+                <td  class="auto-style5">  
+                   <table>
+				     <tr><td><span style="position:relative; top: -4px; text-align: left; color: #FFFFFF;">Find us on</span></td>
+                       <td><table><tr>
+					    <td><a href="http://twitter.com/fishfindinfo" title="Find us on Twitter">
+						    <img src="/images/social-icons/twitter.png" alt="Twitter" 
+                            style="border-style: none; border-color: transparent; border-width: 0px;" /></a></td>
+					    <td><a href="http://www.facebook.com/FishmanTracker" title="Find us on Facebook">
+						    <img src="/images/social-icons/facebook.png" alt="Facebook" 
+                            style="border-style: none; border-color: transparent; border-width: 0px;" /></a></td>
+					    <td><a href="http://www.linkedin.com/company/fishtracker" title="Find us on LinkedIn">
+						    <img src="/images/social-icons/linkedin.png" alt="LinkedIn" 
+                            style="border-style: none; border-color: transparent; border-width: 0px;" /></a></td>
+                        </tr></table>
+                       </td></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="style9"> 
+                    <table class="auto-style8">
+                        <tr><td class="auto-style10">
+                            <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                                <Items>
+                                    <asp:MenuItem Text="Info" Value="Admin" Enabled="True">
+                                        <asp:MenuItem Text="Spiceies" Value="Fish List" NavigateUrl="/Editor/FishList.aspx?fish_type=2"></asp:MenuItem>
+                                        <asp:MenuItem Text="Watershield" Value="Windshield List CA" NavigateUrl="/Editor/WindshieldListCA.aspx?Country=CA"></asp:MenuItem>
+                                        <asp:MenuItem Text="US" Value="Stations US" NavigateUrl="/Editor/ViewMap.aspx?Country=US"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="/Editor/ViewMap.aspx?Country=CA" Text="Canada" Value="Stations CA"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="/Editor/AddNews.aspx" Text="~" Value="AddNews" Enabled="False"></asp:MenuItem>
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="Fishing" Value="Planning" NavigateUrl="~/Default.aspx">
+                                        <asp:MenuItem Text="Sport Forecast" Value="Sport" NavigateUrl="/Forecast/Planning.aspx?type=1"></asp:MenuItem>
+                                        <asp:MenuItem Text="Nearest Best Result" Value="Hobby" NavigateUrl="/Forecast/Planning.aspx?type=3"></asp:MenuItem>
+                                    </asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="News.aspx"   Enabled="true" Text="News"/>
+                                    <asp:MenuItem Text="Canada" NavigateUrl="/Resources/RscMenu.aspx?Country=CA">
+                                        <asp:MenuItem Text="Lake"      Value="Lake"  NavigateUrl="/Resources/RscRiverList.aspx?Country=CA&amp;State=ON&amp;River=1"></asp:MenuItem>
+                                        <asp:MenuItem Text="River"     Value="River" NavigateUrl="/Resources/RscRiverList.aspx?Country=CA&amp;State=ON&amp;River=2"></asp:MenuItem>
+                                        <asp:MenuItem Text="Creek"     Value="Creek" NavigateUrl="/Resources/RscRiverList.aspx?Country=CA&amp;State=ON&amp;River=64"></asp:MenuItem>
+                                        <asp:MenuItem Text="Canal"     Value="Canal" Enabled="false" NavigateUrl="/Resources/RscRiverList.aspx?Country=CA&amp;State=ON&amp;River=128"></asp:MenuItem>
+                                        <asp:MenuItem Text="Reservoir" Value="Reservoir" NavigateUrl="/Resources/RscRiverList.aspx?Country=CA&amp;State=ON&amp;River=8192"></asp:MenuItem>
+                                    </asp:MenuItem>
+                                </Items>
+                            </asp:Menu>
+                        </td>
+                        <td>
+                            <asp:TextBox runat="server" ID="txtBoxSearch" ValidateRequestMode="Disabled" Width="150px"></asp:TextBox>
+                        </td>
+                    </tr></table>
+                </td>
+                <td> 
+                    <a href="/Resources/RscRiverList.aspx" name="theButton" title="Main Page"><img src="/Images/search.png" alt="logo" onclick="Send()" width="24" height="24" /></a>
+                </td>
+                <td class="style10"> </td>
+                <td class="style5"><asp:Label ID="CurrentTime" runat="server" ondatabinding="Page_Load" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+        </div>
+
+        <div class="main" style="margin-top:10px;">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class ="footer">
+          <table style="vertical-align: top; height:36px; top: -15px;">
+            <tr style="height:32px;"><td style="height:32px; text-align: center; font-size: small; color: #FFFFFF">
+               &copy; MB Co 2017-2021. All rights reserved. Developed by <a href="mailto:cchumak@fishfind.info">K&#64;Chumak</a>
+            </td></tr>
+           <%--</table>--%>
+        </div>
+    </div>
+    </form>
+
+</body>
+</html>

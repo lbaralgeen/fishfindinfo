@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><title>
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+<body>
+    <form  name="Form1" id="ctl01" >
+	
+<select onchange="SetText(this)">
+	<option value="0" selected>Выберите значение</option>
+	<option value="10">Десять</option>
+	<option value="101">Сто идин</option>
+	<option value="202">Двести два</option>
+</select>
+<br><br>Выбранное значение из списка<br><input type="search" value="" id="id_2">
+</form>
+<script>
+document.forms['Form1'].reset();
+Edit1 = document.getElementById('id_2');
+
+function SetText(el) {
+	var a = ['10','202'];
+	if (a.indexOf(el.value) != -1) {
+		Edit1.value = el.options[el.selectedIndex].text
+	} else {
+		Edit1.value = '';
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Populate a ListBox from JSON Results</title>
+    <script language="javascript" type="text/javascript"
+    src="http://code.jquery.com/jquery-latest.js"></script>
+   
+    <script type="text/javascript">
+		$(function(){
+		$.getJSON("jsonulmeu.php", function(j){
+		  var options = 'Selectati valoare';
+		  for (var i = j.length-1; i >= 0; i--) {
+			options += '<option selected value="' + j[i].idx + '">' + j[i].txt + '</option>';
+		  }
+		  $("select#listbox").html(options);
+		});
+    </script>
+ 
+     
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div name ="select#listbox">
+    </div>
+    </form>
+</body>
+</html>
